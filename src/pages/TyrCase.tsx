@@ -1,45 +1,74 @@
-import PostitGrid from 'components/aboutMe/PostitGrid';
+import CaseHeader from 'components/CaseHeader';
+import PostitGrid from 'components/PostitGrid';
 import Typo from 'components/Typo';
 
 const TyrCase = () => {
+  const caseHeaderData = {
+    title: 'My Role',
+    role: `As the UX designer for the project I had the initial conversations with the client
+  to understand their business vision and identify the issues they had noticed
+  and needed to improve. Conducted the primary research to analyze the
+  previous system and identify improvements. Based on this analysis, I
+  developed a complete flow for the current system. Also conducted interviews
+  to understand key pain points, which led to creating wireframes and ultimately
+  designing the visual aspects of the screens.`,
+    teamStructure: `2 UX / UI designers (including me)
+  2 developers
+  1 Project Manager`,
+    researchMethods: 'User Interview, usability testing',
+    platform: 'Website',
+    timeFrame: `1 month to design (March, 2023)
+  Remote work`,
+    tools: 'Figma, FigJam and Zoom',
+  };
+
   const items = [
     {
-      header: <img src="images/postItImages/postItImage1.svg" alt="Tyr case" />,
+      icon: <img src="images/tyrCase/postItImages/postItImage1.svg" alt="Tyr case" />,
       paragraph:
         'Identify the complete flow of the system and identify where the connections happened with the different users',
     },
     {
-      header: <img src="images/postItImages/postItImage2.svg" alt="Tyr case" />,
+      icon: <img src="images/tyrCase/postItImages/postItImage2.svg" alt="Tyr case" />,
       paragraph: `Improve the system's usability so that it is easily understandable for both existing and new users`,
     },
 
     {
-      header: <img src="images/postItImages/postItImage3.svg" alt="Tyr case" />,
+      icon: <img src="images/tyrCase/postItImages/postItImage3.svg" alt="Tyr case" />,
       paragraph: 'Improve the design of the  forms to avoid information duplication and reduce errors',
     },
 
     {
-      header: <img src="images/postItImages/postItImage4.svg" alt="Tyr case" />,
+      icon: <img src="images/tyrCase/postItImages/postItImage4.svg" alt="Tyr case" />,
       paragraph:
         'Achieved a 70% reduction in duplication errors. The design incorporated mandatory fields and blocked certain fields from being modified by specific user types',
     },
     {
-      header: <img src="images/postItImages/postItImage5.svg" alt="Tyr case" />,
+      icon: <img src="images/tyrCase/postItImages/postItImage5.svg" alt="Tyr case" />,
       paragraph:
         'Reduction in employee training time: by focusing on usability, the redesign allowed experienced employees to concentrate on their tasks, improving overall company efficiency.',
     },
     {
-      header: <img src="images/postItImages/postItImage6.svg" alt="Tyr case" />,
+      icon: <img src="images/tyrCase/postItImages/postItImage6.svg" alt="Tyr case" />,
       paragraph:
         'We could make a 25% reduction in load time  by reducing the number of form fields and eliminating duplicates, which previously caused double entries and extended processing time.',
     },
   ];
 
   return (
-    <div>
-      <img src="images/tyrCase/cover.svg" alt="Tyr case" />
-      <img src="images/tyrCase/0.svg" alt="Tyr case" style={{ margin: '50px 0 70px 0' }} />
-      <img src="images/tyrCase/2.svg" alt="Tyr case" style={{ margin: '50px 0 70px 0' }} />
+    <div className="w-[1075px] mx-auto">
+      <img src="images/tyrCase/cover.svg" alt="Tyr case" className="rounded-[32px]" />
+      <CaseHeader
+        title="A new internal system to enhace experience"
+        role={caseHeaderData.role}
+        teamStructure={caseHeaderData.teamStructure}
+        researchMethods={caseHeaderData.researchMethods}
+        platform={caseHeaderData.platform}
+        timeFrame={caseHeaderData.timeFrame}
+        tools={caseHeaderData.tools}
+      />
+      {/* <img src="images/tyrCase/0.svg" alt="Tyr case" style={{ margin: '50px 0 70px 0' }} /> */}
+      <img src="images/tyrCase/2.svg" alt="Tyr case" className="mt-12 mb-16 w-full" />
 
       {/* Overview */}
       <p className="jakartaFont" style={{ fontSize: '40px', fontWeight: '700' }}>

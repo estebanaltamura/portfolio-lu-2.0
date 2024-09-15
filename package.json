@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@glidejs/glide": "^3.6.2",
+    "framer-motion": "^11.5.4",
     "react": "^18.3.1",
     "react-alice-carousel": "^2.9.1",
     "react-confetti": "^6.1.0",
@@ -39,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@types/glidejs__glide": "^3.6.5",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "eslint": "^8.57.0",
