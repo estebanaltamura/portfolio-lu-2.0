@@ -8,6 +8,7 @@ import {
   paddingLayoutTopDesktop,
   paddingLayoutTopMobile,
 } from 'globalConfig';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 interface LayoutProps {
@@ -19,6 +20,7 @@ const Layout = ({ children }: LayoutProps) => {
   const paddingTop = menuBarHeight + (isDesktop ? paddingLayoutTopDesktop : paddingLayoutTopMobile);
   const paddingLeftRight = isDesktop ? paddingLayoutLeftRightDesktop : paddingLayoutLeftRightMobile;
   const paddingBottom = isDesktop ? paddingLayoutBottomDesktop : paddingLayoutBottomMobile;
+  const path = window.location.pathname;
 
   const navigate = useNavigate();
 
@@ -38,6 +40,10 @@ const Layout = ({ children }: LayoutProps) => {
   const handleClickLinkedIn = () => {
     window.open('https://www.linkedin.com/in/lucia-rossini-ux-ui-designer/', '_blank');
   };
+
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, [path]);
 
   return (
     <>
