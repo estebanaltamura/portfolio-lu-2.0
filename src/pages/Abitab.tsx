@@ -109,8 +109,10 @@ Remote work`,
 
       <div className="flex flex-col sm:flex-row gap-12 mt-10   mx-auto w-full">
         <div className="flex flex-col bg-[#F5F5FF] rounded-[20px] p-6">
-          <div className="flex gap-4">
-            <img src="/images/abitab/HiScreen1.svg" alt="" />
+          <div className="flex flex-col sm:flex-row gap-4">
+            <span className="sm:mr-7 xl:mr-0 w-fit">
+              <img src="/images/abitab/HiScreen1.svg" alt="" />
+            </span>
 
             <p className="jakartaFont" style={{ fontSize: '19px', fontWeight: '600', color: '#5E2FD3' }}>
               Process in well defined steps
@@ -125,8 +127,11 @@ Remote work`,
         </div>
 
         <div className="flex flex-col bg-[#F5F5FF] rounded-[20px] p-6">
-          <div className="flex gap-4">
-            <img src="/images/abitab/HiScreen2.svg" alt="" />
+          <div className="flex flex-col sm:flex-row gap-4">
+            <span className="sm:mr-7 xl:mr-0 w-fit">
+              {' '}
+              <img src="/images/abitab/HiScreen2.svg" alt="" />
+            </span>
 
             <p className="jakartaFont" style={{ fontSize: '19px', fontWeight: '600', color: '#5E2FD3' }}>
               High-Fidelity prioritized over Wireframes

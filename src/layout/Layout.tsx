@@ -17,7 +17,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   const isDesktop = window.matchMedia(`(min-width: ${layoutMaxWidth}px)`).matches;
-  const paddingTop = menuBarHeight + (isDesktop ? paddingLayoutTopDesktop : paddingLayoutTopMobile);
+  const paddingTop = isDesktop ? paddingLayoutTopDesktop : paddingLayoutTopMobile;
   const paddingLeftRight = isDesktop ? paddingLayoutLeftRightDesktop : paddingLayoutLeftRightMobile;
   const paddingBottom = isDesktop ? paddingLayoutBottomDesktop : paddingLayoutBottomMobile;
   const path = window.location.pathname;
@@ -47,9 +47,9 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-      <header className="bg-[#F5F5FF] h-[52px] w-full">
+      <header className="bg-[#F5F5FF] h-[52px] w-full p-4">
         <div className="max-w-[1350px] mx-auto h-full flex items-center justify-between">
-          <div className="flex space-x-8">
+          <div className="flex space-x-5 sm:space-x-8">
             <p className="cursor-pointer" onClick={handleClickHome}>
               Home
             </p>
@@ -60,7 +60,7 @@ const Layout = ({ children }: LayoutProps) => {
 
           <div className="flex-grow"></div>
 
-          <div className="flex space-x-8">
+          <div className="flex space-x-5 sm:space-x-8">
             <p className="cursor-pointer" onClick={handleClickResume}>
               Resume
             </p>
@@ -70,7 +70,7 @@ const Layout = ({ children }: LayoutProps) => {
           </div>
         </div>
       </header>
-      <div
+      <main
         className="mx-auto w-full min-h-screen"
         style={{
           maxWidth: `${layoutMaxWidth}px`,
@@ -78,7 +78,7 @@ const Layout = ({ children }: LayoutProps) => {
         }}
       >
         {children}
-      </div>
+      </main>
     </>
   );
 };
