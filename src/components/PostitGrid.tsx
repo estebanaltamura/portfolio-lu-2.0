@@ -15,7 +15,7 @@ const PostitGrid = ({ items }: { items: { icon?: JSX.Element; title?: string; pa
               {item.title && (
                 <p className="text-[18px] font-extrabold jakartaFont mt-4 sm:mt-0 xl:mt-4">{item.title}</p>
               )}
-              <p className="text-[18px] font-normal jakartaFont mt-1">{item.paragraph}</p>
+              <p className="text-[18px] font-normal jakartaFont mt-4">{item.paragraph}</p>
             </div>
           </div>
         </div>

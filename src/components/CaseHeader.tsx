@@ -18,14 +18,14 @@ const CaseHeader = ({
   tools,
 }: CaseHeaderProps) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-x-32">
+    <div className="flex flex-col lg:flex-row gap-y-8 sm:gap-x-32">
       {/* Contenedor de texto - Alineamos todo a la izquierda en pantallas pequeñas */}
       <div className="flex flex-col justify-between h-full lg:order-1 space-y-8">
         {/* Título */}
         <p className="jakartaFont font-semibold text-[44px] mt-20 mb-9">{title}</p>
 
         {/* Información adicional organizada en un grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24">
           {/* Sección de la izquierda */}
           <div className="space-y-4 flex flex-col justify-between h-full">
             {/* Mi rol */}
@@ -35,13 +35,13 @@ const CaseHeader = ({
             </div>
 
             {/* Estructura del equipo */}
-            <div>
+            <div className="pt-6">
               <p className="jakartaFont font-semibold text-lg">Team Structure</p>
               <p className="jakartaFont text-base">{teamStructure}</p>
             </div>
 
             {/* Métodos de investigación */}
-            <div>
+            <div className="pt-6">
               <p className="jakartaFont font-semibold text-lg">Research Methods</p>
               <p className="jakartaFont text-base">{researchMethods}</p>
             </div>
@@ -56,13 +56,13 @@ const CaseHeader = ({
             </div>
 
             {/* Tiempo */}
-            <div>
+            <div className="pt-6">
               <p className="jakartaFont font-semibold text-lg">Time Frame</p>
               <p className="jakartaFont text-base">{timeFrame}</p>
             </div>
 
             {/* Herramientas */}
-            <div>
+            <div className="pt-6">
               <p className="jakartaFont font-semibold text-lg">Tools</p>
               <p className="jakartaFont text-base">{tools}</p>
             </div>

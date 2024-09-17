@@ -132,7 +132,7 @@ const AboutMe = () => {
         desktopModeQuantitySlidesLevel={3}
         gap={120}
       /> */}
-      {/* <Framer /> */}
+      <Framer />
 
       <div className="flex flex-col  mt-4">
         <p className="jakartaFont font-semibold text-[44px]">Designing without music...what’s that?</p>
@@ -150,7 +150,7 @@ const AboutMe = () => {
           Hit play, dive into my world, and maybe you&apos;ll find inspiration just like I do.{' '}
         </p>
       </div>
-      {/* <SpotifyWidget /> */}
+      <SpotifyWidget />
       <DontClickButton setConfettiVisible={setConfettiVisible} />
     </>
   );

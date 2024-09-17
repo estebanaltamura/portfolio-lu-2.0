@@ -3,15 +3,11 @@ import Home from 'pages/Home';
 import { menuBarHeight } from 'globalConfig';
 import AboutMe from 'pages/AboutMe';
 import TyrCase from 'pages/TyrCase';
+import Abitab from 'pages/Abitab';
 
 function App() {
   return (
     <>
-      <header
-        style={{ height: `${menuBarHeight}px` }}
-        className={`fixed top-0 left-0 w-full bg-gray-800 text-white flex items-center justify-between px-4 z-50`}
-      ></header>
-
       <main className="pt-[48px]">
         {/* Ajuste del padding top para compensar la altura del AppBar */}
         <Routes>
@@ -19,6 +15,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/tyr-case" element={<TyrCase />} />
+          <Route path="/abitab" element={<Abitab />} />
         </Routes>
       </main>
     </>

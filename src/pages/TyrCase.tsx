@@ -46,20 +46,20 @@ const TyrCase = () => {
     {
       icon: <img src="images/tyrCase/postItImages/postItImage5.svg" alt="Tyr case" />,
       paragraph:
-        'Reduction in employee training time: by focusing on usability, the redesign allowed experienced employees to concentrate on their tasks, improving overall company efficiency.',
+        'Cutting employee training time by 30%, the usability-focused redesign allowed experienced employees to concentrate on their tasks, improving overall company efficiency.',
     },
     {
       icon: <img src="images/tyrCase/postItImages/postItImage6.svg" alt="Tyr case" />,
       paragraph:
-        'We could make a 25% reduction in load time  by reducing the number of form fields and eliminating duplicates, which previously caused double entries and extended processing time.',
+        'Accomplished a 25% reduction in load time by minimizing form fields and removing duplicates, which previously led to double entries and extended processing time',
     },
   ];
 
   return (
-    <div className="w-[1075px] mx-auto">
-      <img src="images/tyrCase/cover.svg" alt="Tyr case" className="rounded-[32px]" />
+    <div className="max-w-[1075px]  w-full mx-auto">
+      <img src="images/tyrCase/cover.svg" alt="Tyr case" className="rounded-[32px] w-full" />
       <CaseHeader
-        title="A new internal system to enhace experience"
+        title="Improving usability to help businesses save time and money"
         role={caseHeaderData.role}
         teamStructure={caseHeaderData.teamStructure}
         researchMethods={caseHeaderData.researchMethods}
@@ -67,7 +67,6 @@ const TyrCase = () => {
         timeFrame={caseHeaderData.timeFrame}
         tools={caseHeaderData.tools}
       />
-      {/* <img src="images/tyrCase/0.svg" alt="Tyr case" style={{ margin: '50px 0 70px 0' }} /> */}
       <img src="images/tyrCase/2.svg" alt="Tyr case" className="mt-12 mb-16 w-full" />
 
       {/* Overview */}
@@ -101,7 +100,7 @@ const TyrCase = () => {
         errors, requiring the owners intervention.
       </p>
 
-      <div className="flex flex-col mt-10 bg-[#F5F5FF] rounded-[20px] p-6 mx-auto">
+      <div className="flex flex-col mt-10 bg-[#F5F5FF] rounded-[20px] p-6 mx-auto w-full">
         <p className="jakartaFont" style={{ fontSize: '19px', fontWeight: '600', color: '#5E2FD3' }}>
           Hypothesis{' '}
         </p>
@@ -120,14 +119,16 @@ const TyrCase = () => {
         Why we did this investigation?
       </p>
       <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
-        To understand the reasons behind the issues this system had, I conducted a research which included
-        user interviews and a fast heuristic evaluation. The time we could dedicate to do the redesign process
-        was quite short, just one month. Therefore, we decided to conduct a focused research effort to
-        maximize the time available. This is why we chose these two methodologies to extract as many insights
-        as possible so we could get started on the work.
+        To uncover the root causes of the system’s issues, I proposed and led a research effort that included
+        user interviews and a quick heuristic evaluation.
       </p>
-      <img src="images/tyrCase/1.svg" alt="Tyr case" style={{ marginTop: '50px' }} />
-      <img src="images/tyrCase/3.svg" alt="Tyr case" style={{ marginTop: '30px' }} />
+      <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
+        Given the short timeline for the redesign—just one month—I designed a focused research plan to
+        maximize the time available. We chose user interviews and a brief heuristic analysis to gather as many
+        insights as possible and efficiently jumpstart the redesign process.
+      </p>
+      <img src="images/tyrCase/1.svg" alt="Tyr case" className="mt-[50px] w-full" />
+      <img src="images/tyrCase/3.svg" alt="Tyr case" className="mt-[30px] w-full" />
 
       {/* Insights */}
       <p className="jakartaFont" style={{ fontSize: '40px', fontWeight: '700', marginTop: '70px' }}>
@@ -162,19 +163,29 @@ const TyrCase = () => {
         </p>
       </div>
 
-      <img src="images/tyrCase/4.svg" alt="Tyr case" style={{ marginTop: '50px' }} />
+      <img src="images/tyrCase/4.svg" alt="Tyr case" className="mt-[50px] w-full" />
 
       {/*Solutions focused */}
       <p className="jakartaFont" style={{ fontSize: '40px', fontWeight: '700', marginTop: '70px' }}>
         Solutions focused on those insights
       </p>
-      <img src="images/tyrCase/5.svg" alt="Tyr case" style={{ marginTop: '30px' }} />
-      <img src="images/tyrCase/6.svg" alt="Tyr case" style={{ marginTop: '110px' }} />
+      <img src="images/tyrCase/5.svg" alt="Tyr case" className="mt-[30px] w-full" />
+      <img src="images/tyrCase/6.svg" alt="Tyr case" className="mt-[110px] w-full" />
 
       {/* Reflections */}
       <p className="jakartaFont" style={{ fontSize: '40px', fontWeight: '700', marginTop: '60px' }}>
         Reflections{' '}
       </p>
+
+      <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
+        What I’d do differently next time.
+      </p>
+
+      <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
+        Each project needs to have a story: the first version of this portfolio and each case study had long
+        texts and pictures with no context, so I decided to
+      </p>
+
       <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
         The project was large and very complex, primarily because we had to base our work on a system with so
         many usability issues while needing to maintain certain structures. Additionally, the raw materials
@@ -186,7 +197,25 @@ const TyrCase = () => {
         questions along the way. For this, it is crucial to have the business on our side and always keep them
         informed of our progress. This allowed us to iterate and improve quickly and effectively.
       </p>
-      <img src="images/tyrCase/7.png" alt="Tyr case" style={{ marginTop: '100px' }} />
+
+      <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
+        Be insight- not process-driven. My first version of this case study was full of unnecessary text at
+        this stage instead of tying everything into the bigger question- “so how does this fit into the bigger
+        picture”? Hence, I cut down the copy by more than 60% and focused on the major points of my project. 
+      </p>
+
+      <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
+        {`You didn’t fail, you just found 100 ways that didn’t work. From noticing mistakes in my UI to
+        uncovering more foundational UX problems in my app, I’m thankful to have constantly asked for feedback
+        from my peers and my mentor.  Even small things should have logic. There should be a reason for
+        selecting a detailed UI based on questions such as  "Why did you design pagination instead of choosing
+        infinite vertical scrolling?" Or "How many lists will you show up to?". During my collaboration with
+        developers, I was often asked, "What happens next when I click this UI?". This experience became an
+        opportunity for me to develop an eye for intuitive and easy-to-use UI as a designer, apart from only
+        focusing on aesthetic design.`}
+      </p>
+
+      <img src="images/tyrCase/7.png" alt="Tyr case" className="mt-[100px] w-full" />
     </div>
   );
 };
