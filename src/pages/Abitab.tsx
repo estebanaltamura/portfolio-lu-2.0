@@ -48,7 +48,9 @@ Remote work`,
 
   return (
     <div className="max-w-[1075px]  w-full mx-auto">
-      <img src="images/abitab/cover.png" alt="Tyr case" className="rounded-[32px] w-full" />
+      <img src="images/abitab/cover.png" alt="Tyr case" className="rounded-3xl w-full" />
+      <p className="jakartaFont text-base font-medium mt-10">ABITAB</p>
+
       <CaseHeader
         title={caseHeaderData.title}
         role={caseHeaderData.role}
@@ -58,39 +60,39 @@ Remote work`,
         timeFrame={caseHeaderData.timeFrame}
         tools={caseHeaderData.tools}
       />
-      <img src="images/abitab/2.svg" alt="Abitab case" className="mt-12 mb-16 w-full" />
+      <img src="images/abitab/2.svg" alt="Abitab case" className="mt-10  w-full" />
 
       {/* Overview */}
-      <p className="jakartaFont" style={{ fontSize: '40px', fontWeight: '700' }}>
+      <p className="jakartaFont mt-10" style={{ fontSize: '40px', fontWeight: '700' }}>
         Overview
       </p>
-      <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
+      <p className="jakartaFont text-base leading-[28px] mt-5">
         Abitab is a Uruguayan company offering services like bill payments, money transfers, and mobile
         top-ups. One of its products, Abitab Mobile Identity, enables users to access public websites and
         perform tasks like paying taxes and scheduling appointments. To become the leading digital identity
         service in Uruguay, Abitab needed to significantly enhance its user experience and technology.
       </p>
 
-      <div className="flex flex-col mt-20">
-        <p className="jakartaFont mb-8" style={{ fontSize: '21px', fontWeight: '700' }}>
+      <div className="flex flex-col mt-10">
+        <p className="jakartaFont mb-5" style={{ fontSize: '21px', fontWeight: '700' }}>
           Main problems
         </p>
         <PostitGrid items={items} />
       </div>
 
       {/* The Design System */}
-      <p className="jakartaFont" style={{ fontSize: '40px', fontWeight: '700', marginTop: '70px' }}>
+      <p className="jakartaFont mt-10" style={{ fontSize: '40px', fontWeight: '700' }}>
         The Design System
       </p>
-      <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
+      <p className="jakartaFont text-base leading-[28px] mt-3">
         Since we had a developed product, many elements of the Design System came predefined beforehand:
         colours, icons, typography, among others.
       </p>
-      <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
+      <p className="jakartaFont text-base leading-[28px] mt-3">
         The job was to design the screens and create new elements that would complement the current design
         system and adapt it to have a more user-centered product.
       </p>
-      <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
+      <p className="jakartaFont text-base leading-[28px] mt-3">
         This approach brought new icons, larger typography, process steppers, a brand new logo, and a great
         effort put on UX writing to ensure clarity as many concepts were new to users.
       </p>
@@ -101,7 +103,7 @@ Remote work`,
       <p className="jakartaFont" style={{ fontSize: '40px', fontWeight: '700', marginTop: '70px' }}>
         Hi-Fi Screens
       </p>
-      <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
+      <p className="jakartaFont text-base leading-[28px] mt-5">
         In terms of visuals, the previously defined definitions extracted from the design system that Abitab
         had were applied, and it was proposed to the client to modify some colors within the color palette to
         make them accessible following the current web accessibility regulations.
@@ -161,7 +163,7 @@ Remote work`,
       <p className="jakartaFont" style={{ fontSize: '40px', fontWeight: '700', marginTop: '60px' }}>
         Reflections{' '}
       </p>
-      <p className="jakartaFont" style={{ fontSize: '17px', fontWeight: '400', marginTop: '20px' }}>
+      <p className="jakartaFont text-base leading-[28px] mt-3">
         The project was large and very complex, primarily because we had to base our work on a system with so
         many usability issues while needing to maintain certain structures. Additionally, the raw materials
         business model includes multiple actors and processes that had to be considered when thinking about

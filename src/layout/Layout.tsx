@@ -47,13 +47,13 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-      <header className="bg-[#F5F5FF] h-[52px] w-full p-4">
+      <header className="bg-white h-[52px] w-full p-4" style={{ borderBottom: '1px solid black' }}>
         <div className="max-w-[1350px] mx-auto h-full flex items-center justify-between">
           <div className="flex space-x-5 sm:space-x-8">
-            <p className="cursor-pointer" onClick={handleClickHome}>
+            <p className="cursor-pointer jakartaFont" onClick={handleClickHome}>
               Home
             </p>
-            <p className="cursor-pointer" onClick={handleClickAboutMe}>
+            <p className="cursor-pointer jakartaFont" onClick={handleClickAboutMe}>
               About me
             </p>
           </div>
@@ -61,10 +61,10 @@ const Layout = ({ children }: LayoutProps) => {
           <div className="flex-grow"></div>
 
           <div className="flex space-x-5 sm:space-x-8">
-            <p className="cursor-pointer" onClick={handleClickResume}>
+            <p className="cursor-pointer jakartaFont" onClick={handleClickResume}>
               Resume
             </p>
-            <p className="cursor-pointer" onClick={handleClickLinkedIn}>
+            <p className="cursor-pointer jakartaFont" onClick={handleClickLinkedIn}>
               LinkedIn
             </p>
           </div>

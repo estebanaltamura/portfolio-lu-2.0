@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 // Define the array of slides with numbers
 const slides = [
   { icon: '/images/aboutMe/carouselImages/aboutMeCarousel1.svg' },
-  { icon: '/images/aboutMe/carouselImages/aboutMeCarousel1.svg' },
-  { icon: '/images/aboutMe/carouselImages/aboutMeCarousel1.svg' },
-  { icon: '/images/aboutMe/carouselImages/aboutMeCarousel1.svg' },
-  { icon: '/images/aboutMe/carouselImages/aboutMeCarousel1.svg' },
+  { icon: '/images/aboutMe/carouselImages/aboutMeCarousel2.svg' },
+  { icon: '/images/aboutMe/carouselImages/aboutMeCarousel3.svg' },
+  { icon: '/images/aboutMe/carouselImages/aboutMeCarousel4.svg' },
+  { icon: '/images/aboutMe/carouselImages/aboutMeCarousel5.svg' },
 ];
 
 const Framer = () => {
@@ -32,19 +32,20 @@ const Framer = () => {
     };
   }, []);
 
-  console.log(innerWidth);
+  // Detect if the window size is below "xl" (1280px)
+  const isBelowXl = innerWidth ? innerWidth < 1280 : false;
 
   // Width of each card should be proportional to the visible area
   const cardWidth = innerWidth ? innerWidth / slides.length : 200;
 
   return (
     <div
-      className="relative h-full overflow-hidden py-12 bg-white mx-auto"
+      className={`relative h-full overflow-hidden py-12 bg-white mx-auto ${isBelowXl ? 'w-full' : ''}`} // Apply full width if below "xl" breakpoint
       style={{
-        width: `${innerWidth}px`, // Ensure full width
-        maxWidth: `${innerWidth}px`, // Adjust max-width if needed
+        width: isBelowXl ? '100%' : `${innerWidth}px`, // Full width for smaller screens
+        maxWidth: isBelowXl ? '100%' : `${innerWidth}px`, // Adjust max-width if needed
         position: 'relative',
-        left: innerWidth ? -(innerWidth - 1183) / 2 : 0,
+        left: isBelowXl ? '0' : innerWidth ? -(innerWidth - 1183) / 2 : 0,
       }}
       onMouseEnter={() => setIsHovered(true)} // Pause on hover
       onMouseLeave={() => setIsHovered(false)} // Resume on mouse leave
@@ -62,7 +63,7 @@ const Framer = () => {
           x: isHovered ? 0 : ['0%', '-100%'], // Pause when hovered
           transition: {
             ease: 'linear',
-            duration: 30, // Adjust speed
+            duration: 60, // Adjust speed
             repeat: Infinity,
             repeatType: 'loop',
           },

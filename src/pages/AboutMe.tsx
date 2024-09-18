@@ -8,6 +8,7 @@ import PostitGrid from 'components/PostitGrid';
 import Carousel2 from 'components/carousel2/Carousel2';
 import Framer from 'components/framer/Framer';
 import SpotifyWidget from 'components/spotifyWidget/SpotifyWidget';
+import PostitGridAboutMe from 'components/aboutMe/PostitGridAboutMe';
 
 const AboutMe = () => {
   const [isConfettiVisible, setConfettiVisible] = useState(false);
@@ -111,46 +112,41 @@ const AboutMe = () => {
         />
       )}
       <AboutMeHeader />
-      <p className="jakartaFont font-semibold text-[44px] mt-20 mb-9">
+      <p className="jakartaFont font-semibold text-[34px] mt-20 mb-9">
         What to expect if you are working with me
       </p>
-      <PostitGrid items={items} />
-      <div className="flex items-center justify-between mt-8">
-        <p className="jakartaFont font-semibold text-[44px]">Kind words from people that worked with me</p>
-        <img src="/images/aboutMe/kindWordIcon.svg" alt="" />
+      <PostitGridAboutMe items={items} />
+      <div className="flex items-center mt-16">
+        <p className="jakartaFont font-semibold text-[34px]">Kind words from people that worked with me</p>
+        <img src="/images/aboutMe/kindWordIcon.svg" alt="" style={{ width: '120px', marginLeft: '70px' }} />
       </div>
-      {/* <AboutMeCarousel
-        desktopSrcImages={aboutMeCarouselDesktopSrcImages}
-        mobileSrcImages={aboutMeCarouselMobileSrcImages}
-      /> */}
-      {/* <Carousel2
-        id="carousel2"
-        desktopSrcImages={aboutMeCarouselDesktopSrcImages}
-        desktopModeWidth="full width"
-        desktopMarginBottom={40}
-        desktopMarginTop={40}
-        desktopModeQuantitySlidesLevel={3}
-        gap={120}
-      /> */}
+
       <Framer />
 
-      <div className="flex flex-col  mt-4">
-        <p className="jakartaFont font-semibold text-[44px]">Designing without music...what’s that?</p>
-        <p className="jakartaFont font-regular text-[17px] mt-10" style={{ lineHeight: '32px' }}>
+      <div className="flex flex-col mt-16 mb-10">
+        <p className="jakartaFont font-semibold text-[34px]">Designing without music...what’s that?</p>
+        <p className="jakartaFont font-regular text-base leading-7 mt-5" style={{ lineHeight: '32px' }}>
           Kind words from people that worked with me
         </p>
-        <p className="jakartaFont font-regular text-[17px]" style={{ lineHeight: '32px' }}>
+        <p className="jakartaFont font-regular text-base leading-7" style={{ lineHeight: '32px' }}>
           I believe one of the best ways to get to know someone is through their music.{' '}
         </p>
-        <p className="jakartaFont font-regular text-[17px]" style={{ lineHeight: '32px' }}>
+        <p className="jakartaFont font-regular text-base leading-7" style={{ lineHeight: '32px' }}>
           From slower tracks that help me focus to upbeat rhythms that take me to more creative worlds, music
           is always present while I design.{' '}
         </p>
-        <p className="jakartaFont font-regular text-[17px]" style={{ lineHeight: '32px' }}>
+        <p className="jakartaFont font-regular text-base leading-7" style={{ lineHeight: '32px' }}>
           Hit play, dive into my world, and maybe you&apos;ll find inspiration just like I do.{' '}
         </p>
       </div>
-      <SpotifyWidget />
+      <div style={{ position: 'relative' }}>
+        <img
+          src="/images/aboutMe/cat.svg"
+          alt=""
+          style={{ position: 'absolute', top: '-120px', right: '30px' }}
+        />
+        <SpotifyWidget />
+      </div>
       <DontClickButton setConfettiVisible={setConfettiVisible} />
     </>
   );
