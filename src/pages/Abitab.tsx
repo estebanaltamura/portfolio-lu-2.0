@@ -1,3 +1,4 @@
+import CarouselDesktop from 'components/CarouselDesktop';
 import CaseHeader from 'components/CaseHeader';
 import PostitGrid from 'components/PostitGrid';
 
@@ -147,7 +148,9 @@ Remote work`,
         </div>
       </div>
 
-      <p className="jakartaFont" style={{ fontSize: '40px', fontWeight: '700', marginTop: '60px' }}>
+      <CarouselDesktop />
+
+      <p className="jakartaFont" style={{ fontSize: '40px', fontWeight: '700', marginTop: '100px' }}>
         Testing with real users
       </p>
 
