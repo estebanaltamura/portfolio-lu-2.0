@@ -21,16 +21,16 @@ const Home = () => {
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto mt-16">
-        <div className="cursor-pointer flex justify-center" onClick={handleClickCase1}>
+        <div className="cursor-pointer flex justify-center float" onClick={handleClickCase1}>
           <img src="/images/home/case1.svg" alt="" />
         </div>
-        <div className="cursor-pointer flex justify-center" onClick={handleClickCase2}>
+        <div className="cursor-pointer flex justify-center float" onClick={handleClickCase2}>
           <img src="/images/home/case2.svg" alt="" />
         </div>
-        {/* <div className="cursor-pointer flex justify-center">
+        {/* <div className="cursor-pointer flex justify-center float" onClick={handleClickCase3}>
           <img src="/images/home/case3.svg" alt="" />
         </div>
-        <div className="cursor-pointer flex justify-center">
+        <div className="cursor-pointer flex justify-center float" onClick={handleClickCase4}>
           <img src="/images/home/case4.svg" alt="" />
         </div> */}
       </div>
