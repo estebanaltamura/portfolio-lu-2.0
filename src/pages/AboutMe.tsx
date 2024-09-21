@@ -111,7 +111,8 @@ const AboutMe = () => {
         />
       )}
       <AboutMeHeader />
-      <p className="jakartaFont font-semibold text-[34px] mt-20 mb-9">
+
+      <p className="jakartaFont font-semibold text-[34px] mt-20 xl:mt-28 mb-9">
         What to expect if you are working with me
       </p>
       <PostitGridAboutMe items={items} />

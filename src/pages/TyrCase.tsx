@@ -148,7 +148,7 @@ const TyrCase = () => {
       </div>
       <div className="flex flex-col mt-6 bg-[#F5F5FF] rounded-2xl p-6 mx-auto">
         <div className="flex gap-x-3">
-          <img src="/images/person.svg" alt="" />
+          <img src="/images/alarm.svg" alt="" />
           <p className="jakartaFont" style={{ fontSize: '19px', fontWeight: '600', color: '#5E2FD3' }}>
             Main challenges
           </p>
