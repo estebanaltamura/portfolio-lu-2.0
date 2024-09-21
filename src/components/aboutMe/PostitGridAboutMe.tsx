@@ -8,8 +8,8 @@ const PostitGridAboutMe = ({
       {items.map((item, index) => (
         <div
           key={index}
-          className="bg-[#F5F5FF] w-full xl:w-[323px] h-full rounded-xl mx-auto"
-          style={{ padding: '30px' }}
+          className="bg-[#F5F5FF] w-full xl:w-[373px] h-full rounded-xl mx-auto"
+          style={{ padding: '30px', boxShadow: '11.465px 11.465px 0px 0px #BFBFB4' }}
         >
           {/* Ajustamos flex para que sea row en sm y column en xl */}
           <div className="flex flex-col sm:flex-row xl:flex-col items-start sm:items-center xl:items-start">

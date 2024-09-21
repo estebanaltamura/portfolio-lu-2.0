@@ -11,7 +11,7 @@
 <g filter="url(#filter0_d_836_2444)">
 <rect x="25.5293" y="21" width="532.973" height="328.612" rx="16" fill="url(#pattern0_836_2444)" shape-rendering="crispEdges"/>
 </g>
-<rect x="482.529" y="70" width="39" height="11" rx="5.5" fill="#D9D9D9"/>
+<rect x="483" y="69" width="39" height="12" fill="#D9D9D9"/>
 <defs>
 <filter id="filter0_d_836_2444" x="0.529297" y="0" width="582.973" height="378.612" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>

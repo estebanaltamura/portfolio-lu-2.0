@@ -64,17 +64,17 @@ const AboutMeHeader = () => {
       </div>
 
       {/* El texto toma todo el espacio disponible y estará después de la imagen en pantallas pequeñas */}
-      <div className="space-y-8 lg:order-1 pt-4 z-10">
-        <p className="jakartaFont font-semibold text-[34px]">A little about myself</p>
-        <p className="jakartaFont font-normal text-[17px]">
+      <div className="lg:order-1 z-10 my-auto">
+        <p className="jakartaFont font-semibold text-[34px]">A little bit about myself</p>
+        <p className="jakartaFont font-normal text-[17px] mt-5">
           I’m a UX/UI designer currently based in Madrid, Spain.
         </p>
-        <p className="jakartaFont font-normal text-[17px]">
+        <p className="jakartaFont font-normal text-[17px] mt-3">
           My design journey began long before I realized I wanted to be a designer. With many years in the
           tourism industry, I learned how to understand what people want, even when they don&apos;t know it
           themselves.
         </p>
-        <p className="jakartaFont font-normal text-[17px]">
+        <p className="jakartaFont font-normal text-[17px] mt-3">
           Now, in the world of experience design, I specialize in uncovering unspoken emotions and translating
           them into intuitive designs that effectively solve user problems.
         </p>

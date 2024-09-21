@@ -15,7 +15,7 @@ const DontClickButton = ({
   return (
     <button
       onClick={confettiHandler}
-      className="jakartaFont text-[29px] rounded-full border-4 border-black bg-[#CB76FF] text-black font-semibold px-9 py-4 block mx-auto mt-9"
+      className="spaceGroteskFont text-[23px] rounded-full border-8 border-black bg-[#CB76FF] text-black font-bold px-9 py-4 block mx-auto mt-9"
     >
       Don&apos;t click me
     </button>

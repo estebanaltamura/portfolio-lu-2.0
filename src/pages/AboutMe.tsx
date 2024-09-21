@@ -20,35 +20,34 @@ const AboutMe = () => {
   const items = [
     {
       icon: (
-        <img src="images/aboutMe/postItImages/aboutMePostIt1.svg" alt="About me" style={{ width: '100%' }} />
+        <img src="images/aboutMe/postItImages/aboutMePostIt2.svg" alt="About me" style={{ width: '100%' }} />
       ),
-      title: 'I’m open to feedback, always',
+      title: 'Challenge-lover and quick  ',
       paragraph:
-        'No ego here. I believe feedback is one of the best ways to grow and improve. If something isn’t working, I want to hear it :)',
+        'If there’s something I don’t know, I’ll find the way to learn it quickly. Challenges make me grow and push me to create better solutions',
     },
     {
       icon: (
-        <img src="images/aboutMe/postItImages/aboutMePostIt2.svg" alt="About me" style={{ width: '100%' }} />
+        <img src="images/aboutMe/postItImages/aboutMePostIt1.svg" alt="About me" style={{ width: '100%' }} />
       ),
-      title: 'Loving challenges and a quick learner',
-      paragraph:
-        'If I don’t know something, I’ll find a way to learn it quickly. Challenges make me want to grow and push me to create better solutions.',
+      title: 'Always open to feedback',
+      paragraph: 'No ego here. I believe feedback is one of the best ways to grow and improve',
     },
     {
       icon: (
         <img src="images/aboutMe/postItImages/aboutMePostIt3.svg" alt="About me" style={{ width: '100%' }} />
       ),
-      title: 'I adapt my language to my audience',
+      title: 'Capable of adappting the way I speak',
       paragraph:
-        'No matter if I’m talking to a developer or a stakeholder, I tailor my communication style to make sure we’re speaking the same language.',
+        'Whether I’m talking to a developer or a stakeholder, I tailor my communication style to make sure we are speaking the same language',
     },
     {
       icon: (
         <img src="images/aboutMe/postItImages/aboutMePostIt4.svg" alt="About me" style={{ width: '100%' }} />
       ),
-      title: 'Taking the work seriously without fearing mistakes is part of my process',
+      title: 'Embracing mistakes fuels creativity',
       paragraph:
-        'Of course, in the way of creating excellent products, there are always doubts and mistakes happen. I’ll ask if needed, and learning from mistakes is part of my religion.',
+        'Doubts and mistakes are allies when it comes to creation. Of course, in the way of creating excellent products, there will always appear doubts and mistakes. If needed I’ll ask for advice or new perspectives: learning from mistakes is part of my religion',
     },
     {
       icon: (
@@ -56,15 +55,15 @@ const AboutMe = () => {
       ),
       title: 'Clear communication is non-negotiable',
       paragraph:
-        'I believe that great projects only succeed when everyone is on the same page. I keep communication open and straightforward to avoid misunderstandings.',
+        'I believe that great projects only succeed when everyone is on the same page. I keep communication open and straightforward to avoid misunderstandings',
     },
     {
       icon: (
         <img src="images/aboutMe/postItImages/aboutMePostIt6.svg" alt="About me" style={{ width: '100%' }} />
       ),
-      title: 'Teamwork and a great work vibe',
+      title: 'Teamwork and a great work vibes',
       paragraph:
-        'My commitment is to fostering strong relationships with my teammates, as I firmly believe that good work happens in a positive and collaborative environment.',
+        'My commitment is to fostering strong relationships with my teammates, as I firmly believe that good work happens in a positive and collaborative environment',
     },
   ];
 
@@ -117,26 +116,28 @@ const AboutMe = () => {
       </p>
       <PostitGridAboutMe items={items} />
       <div className="flex items-center mt-16">
-        <p className="jakartaFont font-semibold text-[34px]">Kind words from people that worked with me</p>
+        <p className="jakartaFont font-semibold text-[34px]">Testimonials of people that worked with me</p>
         <img src="/images/aboutMe/kindWordIcon.svg" alt="" style={{ width: '120px', marginLeft: '70px' }} />
       </div>
 
       <Framer />
 
+      <DontClickButton setConfettiVisible={setConfettiVisible} />
+
       <div className="flex flex-col mt-16 mb-10">
         <p className="jakartaFont font-semibold text-[34px]">Designing without music...what’s that?</p>
-        <p className="jakartaFont font-regular text-base leading-7 mt-5" style={{ lineHeight: '32px' }}>
-          Kind words from people that worked with me
+        <p className="jakartaFont font-regular text-base leading-6 mt-5">
+          For me, music is an essential part of my creative process.
         </p>
-        <p className="jakartaFont font-regular text-base leading-7" style={{ lineHeight: '32px' }}>
-          I believe one of the best ways to get to know someone is through their music.{' '}
+        <p className="jakartaFont font-regular text-base leading-6 mt-1">
+          I believe one of the best ways to get to know someone is through their music.
         </p>
-        <p className="jakartaFont font-regular text-base leading-7" style={{ lineHeight: '32px' }}>
-          From slower tracks that help me focus to upbeat rhythms that take me to more creative worlds, music
-          is always present while I design.{' '}
+        <p className="jakartaFont font-regular text-base leading-6 mt-1">
+          From melow songs that help me focus, to upbeat rhythms that take me to more creative states, music
+          is always present while I design.
         </p>
-        <p className="jakartaFont font-regular text-base leading-7" style={{ lineHeight: '32px' }}>
-          Hit play, dive into my world, and maybe you&apos;ll find inspiration just like I do.{' '}
+        <p className="jakartaFont font-regular text-base leading-6 mt-1">
+          Hit play, dive into my world, and maybe you&apos;ll find inspiration just like I do.
         </p>
       </div>
       <div style={{ position: 'relative' }}>
@@ -147,7 +148,6 @@ const AboutMe = () => {
         />
         <SpotifyWidget />
       </div>
-      <DontClickButton setConfettiVisible={setConfettiVisible} />
     </>
   );
 };

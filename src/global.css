@@ -3,6 +3,8 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
   margin: 0;
@@ -21,6 +23,13 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+.spaceGroteskFont {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.PoetsenOne {
+  font-family: 'Poetsen One', sans-serif;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -84,5 +93,16 @@ code {
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
+  }
+}
+
+.color-transition {
+  display: inline-block;
+  transition: color 1s ease-out 1s; /* La transición de vuelta al color original debe empezar después de 1 segundo y durar 1 segundo */
+  color: black;
+
+  &:hover {
+    color: var(--hover-color); /* El color aparece instantáneamente al hacer hover */
+    transition: color 0s; /* Hace que el color cambie de inmediato al hacer hover */
   }
 }
