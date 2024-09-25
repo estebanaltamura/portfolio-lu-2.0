@@ -58,6 +58,7 @@ const AboutMeHeader = () => {
           src="/images/aboutMe/frame.svg"
           alt=""
           style={{
+            display: isBelowXl ? 'none' : 'block',
             position: 'absolute',
             top: '90px',
             right: `${position}px`,
@@ -75,7 +76,7 @@ const AboutMeHeader = () => {
           className="absolute flex justify-center items-center cursor-pointer"
           style={{
             top: isBelowXl ? '310px' : '100%',
-            right: isBelowXl ? '28%' : '8.4%',
+            right: isBelowXl ? '32%' : '8.4%',
             transform: 'translate(-50%, -50%)',
             zIndex: 20,
           }}
