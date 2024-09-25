@@ -25,7 +25,7 @@ const AboutMeHeader = () => {
   useEffect(() => {
     let calculatedPosition = 0;
     if (width > 1264) {
-      calculatedPosition = (width - 1264) / 2 + 7;
+      calculatedPosition = (width - 1264) / 2 + 5;
     } else if (width > 1024) {
       calculatedPosition = 7;
     } else {
