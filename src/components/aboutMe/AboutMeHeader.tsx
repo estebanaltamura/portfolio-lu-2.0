@@ -47,10 +47,6 @@ const AboutMeHeader = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(isPlaying);
-  }, [isPlaying]);
-
   return (
     <>
       <div
@@ -79,7 +75,7 @@ const AboutMeHeader = () => {
           className="absolute flex justify-center items-center cursor-pointer"
           style={{
             top: isBelowXl ? '310px' : '100%',
-            right: isBelowXl ? '35%' : '8.4%',
+            right: isBelowXl ? '28%' : '8.4%',
             transform: 'translate(-50%, -50%)',
             zIndex: 20,
           }}
