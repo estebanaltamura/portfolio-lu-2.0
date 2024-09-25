@@ -4,8 +4,23 @@ import { menuBarHeight } from 'globalConfig';
 import AboutMe from 'pages/AboutMe';
 import TyrCase from 'pages/TyrCase';
 import Abitab from 'pages/Abitab';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import { hotjar } from 'react-hotjar';
+import 'aos/dist/aos.css';
 
 function App() {
+  useEffect(() => {
+    // Inicializar AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    // Inicializar Hotjar
+    hotjar.initialize({ id: 5059946, sv: 6 });
+  }, []);
+
   return (
     <>
       {/* Ajuste del padding top para compensar la altura del AppBar */}

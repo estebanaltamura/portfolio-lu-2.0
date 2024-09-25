@@ -16,7 +16,7 @@ Remote work`,
     tools: 'Figma, Figjam and Zoom',
   };
 
-  const items = [
+  const itemsPostItGridOne = [
     {
       icon: <img src="images/tyrCase/postItImages/postItImage1.svg" alt="Tyr case" />,
       paragraph:
@@ -32,7 +32,9 @@ Remote work`,
       paragraph:
         'App upgrade needed: the native app, initially a token, was disconnected from the website, missing opportunities for enhanced functionality and user engagement.',
     },
+  ];
 
+  const itemsPostItGridTwo = [
     {
       icon: <img src="images/abitab/postItImages/postItImage4.svg" alt="Tyr case" />,
       paragraph: `of users expressed high satisfaction with the overall user experience, highlighting the app's ease of use and intuitive design`,
@@ -78,7 +80,14 @@ Remote work`,
         <p className="jakartaFont mb-5" style={{ fontSize: '21px', fontWeight: '700' }}>
           Main problems
         </p>
-        <PostitGrid items={items} />
+        <PostitGrid items={itemsPostItGridOne} />
+      </div>
+
+      <div className="flex flex-col mt-10">
+        <p className="jakartaFont mb-5" style={{ fontSize: '21px', fontWeight: '700' }}>
+          Outcomes{' '}
+        </p>
+        <PostitGrid items={itemsPostItGridTwo} />
       </div>
 
       {/* The Design System */}

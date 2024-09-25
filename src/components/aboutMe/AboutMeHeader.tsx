@@ -4,108 +4,125 @@ import { menuBarHeight } from 'globalConfig';
 
 const AboutMeHeader = () => {
   const [isPlaying, setIsPlaying] = useState<boolean | undefined>();
-  const [isBelowXl, setIsBelowXl] = useState(false); // Estado para detectar si la pantalla es menor que xl
+  const [isBelowXl, setIsBelowXl] = useState(false);
   const [width, setWidth] = useState<number>(window.innerWidth);
-  const [position, setPosition] = useState<number | null>(null); // Usar número para `position`
+  const [position, setPosition] = useState<number | null>(null);
 
-  // Especificamos el tipo HTMLVideoElement para videoRef
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Detectar tamaño de pantalla para saber si es menor que xl
   useEffect(() => {
     const handleResize = () => {
-      setIsBelowXl(window.innerWidth < 1280); // 1280px es el límite de xl en Tailwind
+      setIsBelowXl(window.innerWidth < 1024);
       setWidth(window.innerWidth);
     };
 
-    handleResize(); // Llamar inmediatamente para verificar el tamaño inicial
+    handleResize();
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Actualiza la posición del componente dinámicamente basado en el ancho de la ventana
   useEffect(() => {
-    const calculatedPosition = (width - 1280) / 2;
-    setPosition(calculatedPosition + 20); // Almacena el valor calculado sin "px"
+    let calculatedPosition = 0;
+    if (width > 1264) {
+      calculatedPosition = (width - 1264) / 2 + 7;
+    } else if (width > 1024) {
+      calculatedPosition = 7;
+    } else {
+      calculatedPosition = width / 2 - 167;
+    }
+
+    setPosition(calculatedPosition);
   }, [width]);
 
   const handlePlayPause = () => {
     if (videoRef.current) {
       if (isPlaying) {
-        videoRef.current.pause(); // Pausa el video si está en reproducción
-        setIsPlaying(false); // Actualiza el estado a "pausado"
+        videoRef.current.pause();
+        setIsPlaying(false);
       } else {
-        videoRef.current.play(); // Reproduce el video si está pausado
-        setIsPlaying(true); // Actualiza el estado a "reproduciendo"
+        videoRef.current.play();
+        setIsPlaying(true);
       }
     }
   };
 
+  useEffect(() => {
+    console.log(isPlaying);
+  }, [isPlaying]);
+
   return (
     <>
-      {!isBelowXl && (
-        <>
-          <div
-            className="absolute bg-[#F5F5FF] w-screen h-[465px] right-0"
-            style={{ top: menuBarHeight }}
-          ></div>
-          {position !== null && (
-            <img
-              src="/images/aboutMe/frame.svg"
-              alt=""
-              style={{
-                position: 'absolute',
-                top: '100px',
-                right: `${position}px`, // Colocamos el valor calculado correctamente
-                zIndex: '9999',
-                width: '370px',
-              }}
-            />
-          )}
-        </>
+      <div
+        className={`absolute bg-[#F5F5FF] w-screen ${isBelowXl ? 'h-[420px]' : 'h-[465px]'} right-0`}
+        style={{ top: menuBarHeight }}
+      ></div>
+      {position !== null && (
+        <img
+          src="/images/aboutMe/frame.svg"
+          alt=""
+          style={{
+            position: 'absolute',
+            top: '90px',
+            right: `${position}px`,
+            zIndex: 5, // Disminuimos el z-index
+            width: width < 1024 ? '335px' : '390px',
+            pointerEvents: 'none', // Opcional: permite clics a través de la imagen
+          }}
+        />
       )}
 
       <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-x-24 relative mt-5">
-        {/* Mostrar botón de play/pausa solo en pantallas grandes */}
+        {/* Botón de play/pausa */}
         <div
-          className={`absolute flex justify-center items-center cursor-pointer ${
-            isBelowXl ? 'hidden' : 'block'
-          }`} // Ocultamos los botones en pantallas menores que xl
           onClick={handlePlayPause}
-          style={{ top: '100%', right: '8.4%', transform: 'translate(-50%, -50%)', zIndex: '100' }}
+          className="absolute flex justify-center items-center cursor-pointer"
+          style={{
+            top: isBelowXl ? '310px' : '100%',
+            right: isBelowXl ? '35%' : '8.4%',
+            transform: 'translate(-50%, -50%)',
+            zIndex: 20,
+          }}
         >
           <img
             alt="Play/Pause"
             style={{ width: '60px' }}
-            src={isPlaying ? '/images/aboutMe/pause.svg' : '/images/aboutMe/play.svg'} // Cambia el ícono según el estado
+            src={isPlaying ? '/images/aboutMe/pause.svg' : '/images/aboutMe/play.svg'}
           />
         </div>
 
         <div
-          className="relative flex justify-center items-center lg:order-2 m-auto z-10"
-          style={{ minWidth: '340px', maxWidth: '340px', overflow: 'hidden', borderRadius: '50%' }} // Hacemos que el contenedor sea circular y ocultamos el desbordamiento
+          onClick={handlePlayPause}
+          className="relative flex justify-center items-center lg:order-2 m-auto cursor-pointer"
+          style={{
+            minWidth: width < 1024 ? '290px' : '340px',
+            maxWidth: width < 1024 ? '290px' : '340px',
+            overflow: 'hidden',
+            borderRadius: '50%',
+            zIndex: 10, // Aumentamos el z-index
+          }}
         >
-          {/* Video que estará dentro del frame circular */}
+          {/* Video dentro del div */}
           <video
-            ref={videoRef} // Asignamos la referencia al video
+            ref={videoRef}
             src="/images/aboutMe/aboutMeVideo.mp4"
-            autoPlay={isBelowXl || isPlaying} // AutoPlay siempre en pantallas pequeñas
-            loop // Siempre en bucle
+            autoPlay={isBelowXl || isPlaying}
+            loop={isBelowXl}
             className="object-cover w-full h-full video-with-blur"
             style={{
               position: 'relative',
               top: '0',
               left: '0',
               zIndex: '0',
-              scale: typeof isPlaying === 'boolean' ? '1.3' : '1',
+              transform: typeof isPlaying === 'boolean' ? 'scale(1.3)' : 'scale(1)',
+              pointerEvents: 'none', // Asegura que el video no bloquee el clic
             }}
-            poster="/images/aboutMe/lucia.svg" // La miniatura del video
+            poster="/images/aboutMe/lucia.svg"
           />
         </div>
 
-        {/* El texto toma todo el espacio disponible y estará después de la imagen en pantallas pequeñas */}
-        <div className="lg:order-1 z-10 my-auto">
+        {/* Texto descriptivo */}
+        <div className="lg:order-1 z-5 my-auto lg:mt-5 mt-32">
           <p className="jakartaFont font-semibold text-[34px]">A little bit about myself</p>
           <p className="jakartaFont font-normal text-[17px] mt-5">
             I’m a UX/UI designer currently based in Madrid, Spain.

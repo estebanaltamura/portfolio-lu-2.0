@@ -19,7 +19,7 @@ const TyrCase = () => {
     tools: 'Figma, FigJam and Zoom',
   };
 
-  const items = [
+  const itemsPostItGridOne = [
     {
       icon: <img src="images/tyrCase/postItImages/postItImage1.svg" alt="Tyr case" />,
       paragraph:
@@ -34,7 +34,9 @@ const TyrCase = () => {
       icon: <img src="images/tyrCase/postItImages/postItImage3.svg" alt="Tyr case" />,
       paragraph: 'Improve the design of the  forms to avoid information duplication and reduce errors',
     },
+  ];
 
+  const itemsPostItGridTwo = [
     {
       icon: <img src="images/tyrCase/postItImages/postItImage4.svg" alt="Tyr case" />,
       paragraph:
@@ -82,8 +84,16 @@ const TyrCase = () => {
         <p className="jakartaFont mb-5" style={{ fontSize: '21px', fontWeight: '700' }}>
           Objectives
         </p>
-        <PostitGrid items={items} />
+        <PostitGrid items={itemsPostItGridOne} />
       </div>
+
+      <div className="flex flex-col mt-10">
+        <p className="jakartaFont mb-5" style={{ fontSize: '21px', fontWeight: '700' }}>
+          Outcomes
+        </p>
+        <PostitGrid items={itemsPostItGridTwo} />
+      </div>
+
       {/* Challenge */}
       <p className="jakartaFont mt-10" style={{ fontSize: '40px', fontWeight: '700' }}>
         The challenge

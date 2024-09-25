@@ -112,13 +112,13 @@ const AboutMe = () => {
       )}
       <AboutMeHeader />
 
-      <p className="jakartaFont font-semibold text-[34px] mt-20 xl:mt-28 mb-9">
+      <p className="jakartaFont font-semibold text-[34px] mt-20 lg:mt-36 mb-9">
         What to expect if you are working with me
       </p>
       <PostitGridAboutMe items={items} />
       <div className="flex items-center mt-16">
         <p className="jakartaFont font-semibold text-[34px]">Testimonials of people that worked with me</p>
-        <img src="/images/aboutMe/kindWordIcon.svg" alt="" style={{ width: '120px', marginLeft: '70px' }} />
+        {/* <img src="/images/aboutMe/kindWordIcon.svg" alt="" style={{ width: '120px', marginLeft: '70px' }} /> */}
       </div>
 
       <Framer />
