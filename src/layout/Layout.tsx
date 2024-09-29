@@ -1,3 +1,4 @@
+import Header from 'components/header';
 import {
   layoutMaxWidth,
   menuBarHeight,
@@ -8,7 +9,7 @@ import {
   paddingLayoutTopDesktop,
   paddingLayoutTopMobile,
 } from 'globalConfig';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 interface LayoutProps {
@@ -22,59 +23,18 @@ const Layout = ({ children }: LayoutProps) => {
   const paddingBottom = isDesktop ? paddingLayoutBottomDesktop : paddingLayoutBottomMobile;
   const path = window.location.pathname;
 
-  const navigate = useNavigate();
-
-  const handleClickHome = () => {
-    navigate('/');
-  };
-
-  const handleClickAboutMe = () => {
-    navigate('/about-me');
-  };
-
-  const handleClickResume = () => {
-    const driveUrl = 'https://drive.google.com/file/d/1Mkhyhu2k3nldxi0AT0u9sl7LHM-L6g3a/view?usp=sharing';
-    window.open(driveUrl, '_blank');
-  };
-
-  const handleClickLinkedIn = () => {
-    window.open('https://www.linkedin.com/in/lucia-rossini-ux-ui-designer/', '_blank');
-  };
-
   useEffect(() => {
     scrollTo(0, 0);
   }, [path]);
 
   return (
     <>
-      <header className="bg-white h-[52px] w-full p-4" style={{ borderBottom: '1px solid black' }}>
-        <div className="max-w-[1350px] mx-auto h-full flex items-center justify-between">
-          <div className="flex space-x-5 sm:space-x-8">
-            <p className="cursor-pointer jakartaFont" onClick={handleClickHome}>
-              Home
-            </p>
-            <p className="cursor-pointer jakartaFont" onClick={handleClickAboutMe}>
-              About me
-            </p>
-          </div>
-
-          <div className="flex-grow"></div>
-
-          <div className="flex space-x-5 sm:space-x-8">
-            <p className="cursor-pointer jakartaFont" onClick={handleClickResume}>
-              Resume
-            </p>
-            <p className="cursor-pointer jakartaFont" onClick={handleClickLinkedIn}>
-              LinkedIn
-            </p>
-          </div>
-        </div>
-      </header>
+      <Header />
       <main
         className="mx-auto w-full min-h-screen"
         style={{
           maxWidth: `${layoutMaxWidth}px`,
-          padding: `${paddingTop}px ${paddingLeftRight}px ${paddingBottom}px`,
+          padding: `${paddingTop + menuBarHeight}px ${paddingLeftRight}px ${paddingBottom}px`,
         }}
       >
         {children}

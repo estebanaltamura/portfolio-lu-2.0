@@ -9,6 +9,7 @@ import Carousel2 from 'components/carousel2/Carousel2';
 import Framer from 'components/framer/Framer';
 import SpotifyWidget from 'components/spotifyWidget/SpotifyWidget';
 import PostitGridAboutMe from 'components/aboutMe/PostitGridAboutMe';
+import MobileCarousel from 'components/aboutMe/mobileCarousel';
 
 const AboutMe = () => {
   const [isConfettiVisible, setConfettiVisible] = useState(false);
@@ -120,8 +121,7 @@ const AboutMe = () => {
         <p className="jakartaFont font-semibold text-[34px]">Testimonials of people that worked with me</p>
         {/* <img src="/images/aboutMe/kindWordIcon.svg" alt="" style={{ width: '120px', marginLeft: '70px' }} /> */}
       </div>
-
-      <Framer />
+      {width > 796 ? <Framer /> : <MobileCarousel />}
 
       <DontClickButton setConfettiVisible={setConfettiVisible} />
 
@@ -141,11 +141,11 @@ const AboutMe = () => {
           Hit play, dive into my world, and maybe you&apos;ll find inspiration just like I do.
         </p>
       </div>
-      <div style={{ position: 'relative' }}>
+      <div className="relative mt-20 md:mt-0  ">
         <img
           src="/images/aboutMe/cat.svg"
           alt=""
-          style={{ position: 'absolute', top: '-120px', right: '30px' }}
+          className="absolute top-[-72px]  md:top-[-90px] right-[30px] w-[80px] md:w-[100px]"
         />
         <SpotifyWidget />
       </div>
