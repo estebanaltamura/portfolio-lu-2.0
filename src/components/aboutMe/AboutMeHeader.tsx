@@ -25,7 +25,7 @@ const AboutMeHeader = () => {
   useEffect(() => {
     let calculatedPosition = 0;
     if (width > 1264) {
-      calculatedPosition = (width - 1264) / 2 + 5;
+      calculatedPosition = (width - 1264) / 2 + 15;
     } else if (width > 1024) {
       calculatedPosition = 7;
     } else {
@@ -53,7 +53,7 @@ const AboutMeHeader = () => {
         className={`absolute bg-[#F5F5FF] w-screen ${isBelowXl ? 'h-[420px]' : 'h-[465px]'} right-0`}
         style={{ top: menuBarHeight }}
       ></div>
-      {position !== null && (
+      {/* {position !== null && (
         <img
           className=""
           src="/images/aboutMe/frame.svg"
@@ -61,14 +61,14 @@ const AboutMeHeader = () => {
           style={{
             display: 'block',
             position: 'absolute',
-            top: '100px',
+            top: width < 1024 ? '100px' : '90px',
             right: `${position}px`,
             zIndex: 5, // Disminuimos el z-index
             width: width < 1024 ? '335px' : '390px',
             pointerEvents: 'none', // Opcional: permite clics a través de la imagen
           }}
         />
-      )}
+      )} */}
 
       <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-x-24 relative mt-5">
         {/* Contenedor del video */}
