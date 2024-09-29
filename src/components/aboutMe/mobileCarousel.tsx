@@ -1,9 +1,24 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/pagination';
+
+const customStyles = `
+  .swiper-pagination {
+    bottom: 10px; /* Ajuste para mover los dots más abajo */
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #CCC;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #000; /* Color cuando el dot está activo */
+  }
+`;
 
 const MobileCarousel: React.FC = () => {
   // Definimos las imágenes para el carousel en un objeto
@@ -26,10 +41,12 @@ const MobileCarousel: React.FC = () => {
 
   return (
     <div className="w-full mx-auto relative mt-8 mb-8">
+      <style>{customStyles}</style>
       <Swiper
-        modules={[Autoplay]}
+        modules={[Pagination, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
+        pagination={{ clickable: true }}
         autoplay={{
           delay: 3000, // Retraso de 3 segundos entre slides
           disableOnInteraction: false, // No se detiene el autoplay al interactuar con el slider
