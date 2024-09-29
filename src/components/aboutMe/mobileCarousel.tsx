@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 
 const customStyles = `
   .swiper-pagination {
-    bottom: 10px; /* Ajuste para mover los dots más abajo */
+    top: 10px; /* Ajuste para mover los dots más abajo */
   }
 
   .swiper-pagination-bullet {

@@ -55,12 +55,13 @@ const AboutMeHeader = () => {
       ></div>
       {position !== null && (
         <img
+          className=""
           src="/images/aboutMe/frame.svg"
           alt=""
           style={{
-            display: isBelowXl ? 'none' : 'block',
+            display: 'block',
             position: 'absolute',
-            top: '90px',
+            top: '100px',
             right: `${position}px`,
             zIndex: 5, // Disminuimos el z-index
             width: width < 1024 ? '335px' : '390px',
@@ -70,34 +71,19 @@ const AboutMeHeader = () => {
       )}
 
       <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-x-24 relative mt-5">
-        {/* Botón de play/pausa */}
+        {/* Contenedor del video */}
         <div
-          onClick={handlePlayPause}
-          className="absolute flex justify-center items-center cursor-pointer"
-          style={{
-            top: isBelowXl ? '310px' : '100%',
-            right: isBelowXl ? '32%' : '8.4%',
-            transform: 'translate(-50%, -50%)',
-            zIndex: 20,
-          }}
-        >
-          <img
-            alt="Play/Pause"
-            style={{ width: '60px' }}
-            src={isPlaying ? '/images/aboutMe/pause.svg' : '/images/aboutMe/play.svg'}
-          />
-        </div>
-
-        <div
-          onClick={handlePlayPause}
           className="relative flex justify-center items-center lg:order-2 m-auto cursor-pointer"
           style={{
             minWidth: width < 1024 ? '290px' : '340px',
             maxWidth: width < 1024 ? '290px' : '340px',
             overflow: 'hidden',
             borderRadius: '50%',
+            right: width > 1024 ? '15px' : '',
             zIndex: 10, // Aumentamos el z-index
+            position: 'relative',
           }}
+          onClick={handlePlayPause}
         >
           {/* Video dentro del div */}
           <video
@@ -111,11 +97,31 @@ const AboutMeHeader = () => {
               top: '0',
               left: '0',
               zIndex: '0',
-              transform: typeof isPlaying === 'boolean' ? 'scale(1.3)' : 'scale(1)',
+              transform: 'scale(1.3)',
               pointerEvents: 'none', // Asegura que el video no bloquee el clic
             }}
             poster="/images/aboutMe/lucia.svg"
           />
+
+          {/* Botón de play/pausa centrado */}
+          <div
+            className="absolute flex justify-center items-center cursor-pointer"
+            style={{
+              width: '100%', // El contenedor del botón tiene el mismo ancho que el video
+              height: '100%', // El contenedor del botón tiene el mismo alto que el video
+              top: '87%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)', // Centra el botón tanto horizontal como verticalmente
+              zIndex: 20,
+            }}
+            onClick={handlePlayPause}
+          >
+            <img
+              alt="Play/Pause"
+              style={{ width: '60px' }}
+              src={isPlaying ? '/images/aboutMe/pause.svg' : '/images/aboutMe/play.svg'}
+            />
+          </div>
         </div>
 
         {/* Texto descriptivo */}
