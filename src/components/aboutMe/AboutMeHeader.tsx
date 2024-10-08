@@ -53,24 +53,26 @@ const AboutMeHeader = () => {
         className={`absolute bg-[#F5F5FF] w-screen ${isBelowXl ? 'h-[420px]' : 'h-[465px]'} right-0`}
         style={{ top: menuBarHeight }}
       ></div>
-      {/* {position !== null && (
-        <img
-          className=""
-          src="/images/aboutMe/frame.svg"
-          alt=""
-          style={{
-            display: 'block',
-            position: 'absolute',
-            top: width < 1024 ? '100px' : '90px',
-            right: `${position}px`,
-            zIndex: 5, // Disminuimos el z-index
-            width: width < 1024 ? '335px' : '390px',
-            pointerEvents: 'none', // Opcional: permite clics a través de la imagen
-          }}
-        />
-      )} */}
 
       <div className="flex flex-col lg:flex-row gap-y-8 lg:gap-x-24 relative mt-5">
+        {position !== null && (
+          <img
+            className=""
+            src="/images/aboutMe/frame.svg"
+            alt=""
+            style={{
+              display: 'block',
+              transform: 'translate(-50%, -50%)',
+              position: 'absolute',
+              top: width < 1024 ? '145px' : '168px',
+              left: width < 1024 ? `calc(50% - 0px)` : '',
+              right: width < 1024 ? '' : 'calc(-205px)',
+              zIndex: 5, // Disminuimos el z-index
+              width: width < 1024 ? '335px' : '390px',
+              pointerEvents: 'none', // Opcional: permite clics a través de la imagen
+            }}
+          />
+        )}
         {/* Contenedor del video */}
         <div
           className="relative flex justify-center items-center lg:order-2 m-auto cursor-pointer"
