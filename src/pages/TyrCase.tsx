@@ -1,6 +1,7 @@
 import CaseHeader from 'components/CaseHeader';
 import PostitGrid from 'components/PostitGrid';
 import Typo from 'components/Typo';
+import { useEffect } from 'react';
 
 const TyrCase = () => {
   const caseHeaderData = {
@@ -53,6 +54,10 @@ const TyrCase = () => {
         'Accomplished a 25% reduction in load time by minimizing form fields and removing duplicates, which previously led to double entries and extended processing time',
     },
   ];
+
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="max-w-[1075px]  w-full mx-auto">

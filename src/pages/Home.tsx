@@ -25,6 +25,8 @@ const Home = () => {
   };
 
   useEffect(() => {
+    scrollTo(0, 0);
+
     // Selecciona todos los elementos <p> en el DOM
     const paragraphs = document.querySelectorAll('h1');
 

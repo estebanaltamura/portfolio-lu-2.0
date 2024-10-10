@@ -95,6 +95,10 @@ const AboutMe = () => {
   // Obtener la posición del scroll
   const scrollPositionY = typeof window !== 'undefined' ? window.scrollY : 0;
 
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       {isConfettiVisible && (

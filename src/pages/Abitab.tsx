@@ -1,6 +1,7 @@
 import CarouselDesktop from 'components/CarouselDesktop';
 import CaseHeader from 'components/CaseHeader';
 import PostitGrid from 'components/PostitGrid';
+import { useEffect } from 'react';
 
 const Abitab = () => {
   const caseHeaderData = {
@@ -48,6 +49,10 @@ Remote work`,
       paragraph: `of users found the registration process quick and straightforward, rating it as 'super short' or 'short'`,
     },
   ];
+
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="max-w-[1075px]  w-full mx-auto">
