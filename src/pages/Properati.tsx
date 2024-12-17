@@ -79,7 +79,7 @@ Remote work`,
   return (
     <div className="max-w-[1075px]  w-full mx-auto">
       <img src="images/properati/cover.png" alt="Tyr case" className="rounded-3xl w-full" />
-      <p className="jakartaFont text-base font-medium mt-10">ABITAB</p>
+      <p className="jakartaFont text-base font-medium mt-10">PROPERATI</p>
       <CaseHeader
         title={caseHeaderData.title}
         role={caseHeaderData.role}
