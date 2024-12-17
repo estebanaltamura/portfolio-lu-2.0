@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import { hotjar } from 'react-hotjar';
 import 'aos/dist/aos.css';
+import Properati from 'pages/Properati';
 
 function App() {
   useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/about-me" element={<AboutMe />} />
         <Route path="/tyr-case" element={<TyrCase />} />
         <Route path="/abitab" element={<Abitab />} />
+        <Route path="/properati" element={<Properati />} />
       </Routes>
     </>
   );

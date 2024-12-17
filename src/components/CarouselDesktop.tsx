@@ -3,17 +3,12 @@ import Glide from '@glidejs/glide';
 import '@glidejs/glide/dist/css/glide.core.min.css';
 import '@glidejs/glide/dist/css/glide.theme.min.css';
 
-const CarouselDesktop = () => {
+type CarouselDesktopProps = {
+  desktopImages: string[];
+};
+
+const CarouselDesktop = ({ desktopImages }: CarouselDesktopProps) => {
   // Definir las imágenes de escritorio dentro del componente
-  const desktopSrcImages = [
-    '/images/abitab/abitab-telefono-1.png',
-    '/images/abitab/abitab-telefono-2.png',
-    '/images/abitab/abitab-telefono-3.png',
-    '/images/abitab/abitab-telefono-4.png',
-    '/images/abitab/abitab-telefono-5.png',
-    '/images/abitab/abitab-telefono-6.png',
-    '/images/abitab/abitab-telefono-7.png',
-  ];
 
   const [innerWidth, setInnerWidth] = useState<number | null>(null);
   const carouselRef = useRef<HTMLDivElement | null>(null);
@@ -86,7 +81,7 @@ const CarouselDesktop = () => {
     >
       <div className="glide__track" data-glide-el="track">
         <ul className="glide__slides">
-          {desktopSrcImages.map((src, index) => (
+          {desktopImages.map((src, index) => (
             <li className="glide__slide" key={index}>
               <img src={src} alt={`Slide ${index + 1}`} style={{ width: '100%' }} />
             </li>

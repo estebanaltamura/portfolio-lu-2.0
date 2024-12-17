@@ -14,6 +14,10 @@ const Home = () => {
     navigate('/abitab');
   };
 
+  const handleClickCase3 = () => {
+    navigate('/properati');
+  };
+
   const scrollDownClickHandler = () => {
     const element = document.getElementById('cardCaseContainer'); // Asegúrate de que el ID sea correcto
     if (element) {
@@ -94,10 +98,10 @@ const Home = () => {
         <div className="cursor-pointer flex justify-center" onClick={handleClickCase2}>
           <img src="/images/home/case2.png" alt="" />
         </div>
-        {/* <div className="cursor-pointer flex justify-center" onClick={handleClickCase1}>
-          <img src="/images/home/case1.png" alt="" />
+        <div className="cursor-pointer flex justify-center" onClick={handleClickCase3}>
+          <img src="/images/home/case3.png" alt="" />
         </div>
-        <div className="cursor-pointer flex justify-center" onClick={handleClickCase2}>
+        {/* <div className="cursor-pointer flex justify-center" onClick={handleClickCase2}>
           <img src="/images/home/case2.png" alt="" />
         </div> */}
       </div>

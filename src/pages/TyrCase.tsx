@@ -55,10 +55,6 @@ const TyrCase = () => {
     },
   ];
 
-  useEffect(() => {
-    scrollTo(0, 0);
-  }, []);
-
   return (
     <div className="max-w-[1075px]  w-full mx-auto">
       <img src="images/tyrCase/cover.svg" alt="Tyr case" className="rounded-3xl w-full" />

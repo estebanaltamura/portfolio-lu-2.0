@@ -50,6 +50,16 @@ Remote work`,
     },
   ];
 
+  const desktopSrcImages = [
+    '/images/abitab/abitab-telefono-1.png',
+    '/images/abitab/abitab-telefono-2.png',
+    '/images/abitab/abitab-telefono-3.png',
+    '/images/abitab/abitab-telefono-4.png',
+    '/images/abitab/abitab-telefono-5.png',
+    '/images/abitab/abitab-telefono-6.png',
+    '/images/abitab/abitab-telefono-7.png',
+  ];
+
   useEffect(() => {
     scrollTo(0, 0);
   }, []);
@@ -162,7 +172,7 @@ Remote work`,
         </div>
       </div>
 
-      <CarouselDesktop />
+      <CarouselDesktop desktopImages={desktopSrcImages} />
 
       <p className="jakartaFont" style={{ fontSize: '40px', fontWeight: '700', marginTop: '100px' }}>
         Testing with real users
