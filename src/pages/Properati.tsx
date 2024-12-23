@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 
 const Properati = () => {
   const caseHeaderData = {
-    title: 'A tool for real estate expers to work faster and efficiently',
+    title: 'A tool for real estate experts to work faster and efficiently',
     role: `I collaborated with a remote team to tackle key pain points faced by Properati’s real estate experts. As the UX designer, I helped create a solution that automated the manual process of searching and presenting properties, which had been causing delays and client losses. By co-analyzing research and leveraging user insights, I implemented design improvements that sped up responses and enhanced proposal visuals. I also created a backlog of tasks for future iterations to ensure continued optimization of the user experience.`,
     teamStructure: `1 UX Designer,
     3 developers,
