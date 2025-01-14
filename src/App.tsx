@@ -9,6 +9,7 @@ import AOS from 'aos';
 import { hotjar } from 'react-hotjar';
 import 'aos/dist/aos.css';
 import Properati from 'pages/Properati';
+import Proppit from 'pages/Proppit';
 
 function App() {
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/tyr-case" element={<TyrCase />} />
         <Route path="/abitab" element={<Abitab />} />
         <Route path="/properati" element={<Properati />} />
+        <Route path="/proppit" element={<Proppit />} />
       </Routes>
     </>
   );

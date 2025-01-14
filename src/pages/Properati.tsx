@@ -21,17 +21,17 @@ Remote work`,
     {
       icon: <img src="images/properati/postItImages/postItImage1.svg" alt="Tyr case" />,
       paragraph:
-        'Doing things manually: Creating manual proposals was a highly time-consuming process that significantly impacted the efficiency of the commercial workflow. Each expert had to manually gather information about the properties, format the proposal individually, and then send it to each client.',
+        'Creating manual proposals was a highly time-consuming process that significantly impacted the efficiency of the commercial workflow. Each expert had to manually gather information about the properties, format the proposal individually, and then send it to each client.',
     },
     {
       icon: <img src="images/properati/postItImages/postItImage2.svg" alt="Tyr case" />,
-      paragraph: `Mutiple channels: The process of sending house proposals by the experts lacked uniformity, as some used WhatsApp, others used email, and some made phone calls. This impacted the consistency of the company's brand image and the customer experience.`,
+      paragraph: `The process of sending house proposals by the experts lacked uniformity, as some used WhatsApp, others used email, and some made phone calls. This impacted the consistency of the company's brand image and the customer experience.`,
     },
 
     {
       icon: <img src="images/properati/postItImages/postItImage3.svg" alt="Tyr case" />,
       paragraph:
-        'No design in the proposal: The absence of a standardized design for the proposals, along with each expert sending their own version, resulted in an inconsistent brand image. Without a cohesive format, the information about each property was presented in various ways, making it difficult for clients to compare options effectively.',
+        'The absence of a standardized design for the proposals, along with each expert sending their own version, resulted in an inconsistent brand image. Without a cohesive format, the information about each property was presented in various ways, making it difficult for clients to compare options effectively.',
     },
   ];
 
@@ -181,7 +181,7 @@ Remote work`,
       <CarouselDesktop desktopImages={desktopSrcImages} />
 
       {/** The Design */}
-      <p className="jakartaFont mt-10" style={{ fontSize: '40px', fontWeight: '700' }}>
+      <p className="jakartaFont mt-20" style={{ fontSize: '40px', fontWeight: '700' }}>
         Reflections{' '}
       </p>
       <p className="jakartaFont text-base leading-[28px] mt-5">

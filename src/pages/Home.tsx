@@ -19,7 +19,7 @@ const Home = () => {
   };
 
   const handleClickCase4 = () => {
-    //navigate('/');
+    navigate('/proppit');
   };
 
   const scrollDownClickHandler = () => {
